@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "chunk-copy",
+	"version": "${version}",
+	"name": "ChunkCopy",
+	"description": "A Minecraft mod enabling players to effortlessly copy and paste chunks between worlds.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"github": "https://github.com/Mintype/ChunkCopy"
+	},
+	"license": "CC0-1.0",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+          "com.mintype.ChunkCopy"
+		],
+		"client": [
+			"com.mintype.ChunkCopyClient"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
